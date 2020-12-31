@@ -39,7 +39,7 @@ router.get("/images", async (req, res, next) => {
   
   for(var i = files.length - 1; i >= 0; i--) {
     var file = files[i];
-    var host = req.app.get('env') == 'development' ? `http://${process.env.HOST}:${process.env.PORT}` : `https://${process.env.HOST}`;
+    var host = process.env.MODE == 'development' ? `http://${process.env.HOST}:${process.env.PORT}` : `https://${process.env.HOST}`;
     var img = `${host}/images/${file}`;
     if(req.query.search) {
       if(img.includes(req.query.search)) arr.push(img);
