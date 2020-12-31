@@ -31,6 +31,7 @@ router.get("/images", async (req, res, next) => {
   var files = [];
   try {
     files = await fs.promises.readdir(IMAGES_DIR);
+    files = files.filter(file => !(/(^|\/)\.[^\/\.]/g).test(file));
   } catch(err) {
     return next(err);
   }
