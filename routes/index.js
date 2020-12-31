@@ -22,11 +22,11 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'image.io backend server' });
 });
 
-router.post("/images", upload.array('photos'), (req, res, next) => {
+router.post("/api/images", upload.array('photos'), (req, res, next) => {
   res.json({ "message": "Images uploaded" });
 })
 
-router.get("/images", async (req, res, next) => {
+router.get("/api/images", async (req, res, next) => {
   var arr = [];
   var files = [];
   try {
