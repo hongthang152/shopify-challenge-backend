@@ -25,7 +25,7 @@ npm install
 npm start
 ```
 
-3. Open [localhost:3000](localhost:3000) and you should be able to see our application running
+3. Open [localhost:3000](http://localhost:3000/) and you should be able to see our application running
 
 
 ## Contributing
