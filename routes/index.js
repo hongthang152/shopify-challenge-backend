@@ -19,7 +19,7 @@ const IMAGES_DIR = 'public/images';
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'image.io backend server' });
+  res.render('index', { title: 'yuss.cc backend server' });
 });
 
 router.post("/api/images", upload.array('photos'), (req, res, next) => {
